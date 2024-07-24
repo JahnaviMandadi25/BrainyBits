@@ -1,0 +1,109 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+.header {
+    background-color: rgba(154, 200, 205, 0.8); /* Translucent color using #9AC8CD */
+    color: #ffffff; /* White text color for links */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute; /* Positioned above video */
+    top: 0;
+    z-index: 10; /* Ensures the header is above the video */
+    box-shadow: none; /* Remove shadow for transparency effect */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.header img {
+    height: 50px;
+    margin-right: 20px;
+    border: none;  /* Remove border */
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif; /* Subtle, modern font */
+    font-weight: 300; /* Light font weight for a subtle look */
+    color: #ffffff; /* White color for "Brainy Bits" heading */
+}
+
+.header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 5px;
+}
+
+.header nav ul li {
+    margin-left: 0;
+}
+
+.header nav ul li a {
+    color: #ffffff; /* White text color */
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.header nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.7);  /* Darker on hover */
+    color: #ffffff;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ensure it's above video */
+    z-index: 5; /* Higher than video, lower than header */
+}
+
+.footer {
+    background-color: rgba(154, 200, 205, 0.8); /* Translucent color using #9AC8CD */
+    color: #ffffff; /* White color for footer content */
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: absolute; /* Positioned above video */
+    bottom: 0;
+    z-index: 10; /* Ensures the footer is above the video */
+    box-shadow: none; /* Remove shadow for transparency effect */
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Video behind other content */
+    overflow: hidden; /* Hide overflow */
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure video covers the whole area */
+    position: absolute;
+    top: 0;
+    left: 0;
+}

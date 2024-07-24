@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Classroom Monitoring{% endblock %}
+{% block content %}
+<div class="video-container">
+    <img src="{{ url_for('video_feed') }}" width="1024" height="640" alt="Video Feed">
+</div>
+{% endblock %}
